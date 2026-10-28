@@ -32,17 +32,19 @@ export default function Header() {
         {/* Floating Rounded Rectangle Navbar */}
         <div className="max-w-7xl mx-auto bg-[#111311] text-[#F7F3E9] py-3.5 px-6 md:px-8 rounded-[2rem] shadow-lg flex items-center justify-between border border-white/10">
           
-          {/* Logo in Navbar */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="relative w-36 h-10 md:w-44 md:h-12 transition-transform group-hover:scale-105 duration-200">
-              <Image
-                src="/logo.png"
-                alt="FRYZO"
-                fill
-                sizes="(max-width: 768px) 144px, 176px"
-                className="object-contain"
-                priority
-              />
+          {/* Logo with Oval Badge in Navbar */}
+          <Link href="/" className="flex items-center group">
+            <div className="px-4 sm:px-5 py-1.5 rounded-full bg-[#0A4A46] border-2 border-[#126861] group-hover:border-brand-cyan/70 transition-all duration-300 shadow-md flex items-center justify-center">
+              <div className="relative w-24 h-7 sm:w-28 sm:h-8 transition-transform group-hover:scale-105 duration-200">
+                <Image
+                  src="/logo.png"
+                  alt="FRYZO"
+                  fill
+                  sizes="(max-width: 768px) 100px, 120px"
+                  className="object-contain"
+                  priority
+                />
+              </div>
             </div>
           </Link>
 
@@ -66,11 +68,18 @@ export default function Header() {
             })}
           </nav>
 
-          {/* Right Action: Pill Basket in Cream on Charcoal */}
-          <div className="flex items-center gap-3">
+          {/* Right Action: Shop Now + Pill Basket */}
+          <div className="flex items-center gap-2.5 sm:gap-3">
+            <Link
+              href="/shop"
+              className="flex items-center gap-1.5 px-3.5 sm:px-4 py-1.5 rounded-full bg-brand-cyan text-[#111311] hover:bg-white transition-all text-xs font-mono uppercase tracking-wider font-bold shadow-sm hover:scale-105 active:scale-95"
+            >
+              <span>SHOP NOW</span>
+            </Link>
+
             <button
               onClick={toggleCart}
-              className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F7F3E9] text-[#111311] hover:bg-brand-cyan transition-all text-xs font-mono uppercase tracking-wider font-bold shadow-sm"
+              className="flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-[#F7F3E9] text-[#111311] hover:bg-brand-cyan transition-all text-xs font-mono uppercase tracking-wider font-bold shadow-sm hover:scale-105 active:scale-95"
               aria-label="View basket"
             >
               <span>BASKET</span>
@@ -101,13 +110,16 @@ export default function Header() {
           <div className="relative w-4/5 max-w-sm bg-[#111311] text-[#F7F3E9] h-full p-8 flex flex-col justify-between z-10 border-l border-white/10 shadow-2xl">
             <div>
               <div className="flex items-center justify-between pb-6 border-b border-white/10">
-                <div className="relative w-32 h-9">
-                  <Image
-                    src="/logo.png"
-                    alt="FRYZO"
-                    fill
-                    className="object-contain"
-                  />
+                <div className="px-3.5 py-1.5 rounded-full bg-[#0A4A46] border border-[#126861] flex items-center justify-center">
+                  <div className="relative w-24 h-7">
+                    <Image
+                      src="/logo.png"
+                      alt="FRYZO"
+                      fill
+                      sizes="100px"
+                      className="object-contain"
+                    />
+                  </div>
                 </div>
                 <button
                   onClick={() => setMobileMenuOpen(false)}
