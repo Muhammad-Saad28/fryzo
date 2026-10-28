@@ -13,10 +13,6 @@ export default function FAQSection() {
         
         {/* Section Header */}
         <div className="text-center space-y-2">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#2D3327]/20 bg-[#0A4A46] text-brand-cyan text-[11px] font-mono uppercase tracking-widest shadow-xs">
-            <span className="w-2 h-2 rounded-full bg-brand-cyan" />
-            <span>05 / CULINARY GUIDELINES</span>
-          </div>
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold font-sans tracking-tight text-[#2D3728]">
             Frequently Asked Questions.
           </h2>
@@ -33,23 +29,23 @@ export default function FAQSection() {
               <div
                 key={faq.question}
                 onMouseEnter={() => setOpenIdx(idx)}
-                className={`rounded-[1.8rem] border-2 transition-all duration-300 overflow-hidden cursor-pointer shadow-md ${
+                className={`group rounded-[1.8rem] border-2 transition-all duration-300 overflow-hidden cursor-pointer shadow-md hover:-translate-y-1 ${
                   isOpen
-                    ? 'bg-[#0A4A46] border-brand-cyan text-white shadow-xl'
-                    : 'bg-[#0F5A55] border-[#18756E] text-[#F7F3E9] hover:border-brand-cyan/60'
+                    ? 'bg-[#0A4A46] border-brand-cyan text-white shadow-xl -translate-y-0.5'
+                    : 'bg-[#0F5A55] border-[#18756E] text-[#F7F3E9] hover:border-brand-cyan/80 hover:bg-[#126861] hover:shadow-xl'
                 }`}
               >
                 <div
                   className="w-full p-6 sm:p-7 text-left flex items-center justify-between gap-4 transition-colors select-none"
                 >
-                  <span className={`font-bold text-base sm:text-lg font-sans ${isOpen ? 'text-white' : 'text-[#F7F3E9]'}`}>
+                  <span className={`font-bold text-base sm:text-lg font-sans transition-colors ${isOpen ? 'text-white' : 'text-[#F7F3E9] group-hover:text-white'}`}>
                     {faq.question}
                   </span>
                   <div
-                    className={`w-9 h-9 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${
+                    className={`w-9 h-9 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 group-hover:scale-110 ${
                       isOpen
-                        ? 'rotate-180 bg-brand-cyan text-[#111311]'
-                        : 'bg-[#0A4A46] border border-white/20 text-brand-cyan'
+                        ? 'rotate-180 bg-brand-cyan text-[#111311] shadow-md'
+                        : 'bg-[#0A4A46] border border-white/20 text-brand-cyan group-hover:border-brand-cyan'
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />

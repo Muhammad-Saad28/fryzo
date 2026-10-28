@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -10,10 +10,15 @@ import { useCartStore } from '@/store/cartStore';
 export default function Header() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const { toggleCart, getTotalItems } = useCartStore();
-  const totalItems = getTotalItems();
 
-  // Removed 'Objects' as requested
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const totalItems = mounted ? getTotalItems() : 0;
+
   const navLinks = [
     { label: 'Home', href: '/' },
     { label: 'Collection', href: '/shop' },
@@ -34,13 +39,14 @@ export default function Header() {
                 src="/logo.png"
                 alt="FRYZO"
                 fill
+                sizes="(max-width: 768px) 144px, 176px"
                 className="object-contain"
                 priority
               />
             </div>
           </Link>
 
-          {/* Minimal Centered Navigation Links (Home, Collection, About, Contact) */}
+          {/* Minimal Centered Navigation Links */}
           <nav className="hidden md:flex items-center gap-9">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;

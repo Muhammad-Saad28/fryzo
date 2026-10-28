@@ -17,15 +17,10 @@ export default function StorySection() {
             
             {/* Left Column: Expressive Editorial Narrative */}
             <div className="lg:col-span-7 space-y-8 z-10">
-              
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-brand-black/15 bg-white text-brand-black text-[11px] font-mono uppercase tracking-widest shadow-xs">
-                <span className="w-2 h-2 rounded-full bg-brand-cyan" />
-                <span>01 / THE FRYZO PHILOSOPHY</span>
-              </div>
 
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-sans tracking-tight text-[#2D3728] leading-[1.05]">
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-sans tracking-tight text-[#111311] leading-[1.05]">
                 Re-engineering the potato for the{' '}
-                <span className="text-brand-cyan underline decoration-[#364231]/30 underline-offset-8">
+                <span className="text-[#111311]">
                   perfect golden bite.
                 </span>
               </h2>
@@ -49,9 +44,9 @@ export default function StorySection() {
                 ].map((item) => (
                   <div
                     key={item}
-                    className="flex items-center gap-3 p-3.5 rounded-2xl bg-[#0A4A46] text-[#F7F3E9] border-2 border-[#126861] shadow-md group hover:border-brand-cyan/80 transition-all duration-300"
+                    className="flex items-center gap-3 p-3.5 rounded-2xl bg-[#0A4A46] text-[#F7F3E9] border-2 border-[#126861] shadow-md group hover:-translate-y-1 hover:shadow-xl hover:border-brand-cyan hover:bg-[#0c534f] transition-all duration-300 cursor-pointer"
                   >
-                    <CheckCircle2 className="w-4 h-4 text-brand-cyan shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-brand-cyan shrink-0 group-hover:scale-125 group-hover:rotate-12 transition-transform duration-300" />
                     <span className="text-xs font-mono uppercase tracking-wider font-bold">
                       {item}
                     </span>
@@ -74,7 +69,7 @@ export default function StorySection() {
             {/* Right Column: Architectural Dark Green Frame with CEO Portrait - Also using #0A4A46 / #126861 */}
             <div className="lg:col-span-5 relative">
               
-              <div className="relative w-full rounded-[2.2rem] md:rounded-[2.6rem] bg-[#0A4A46] p-5 sm:p-7 border-2 border-[#126861] shadow-2xl overflow-hidden text-white flex flex-col justify-between">
+              <div className="relative w-full rounded-[2.2rem] md:rounded-[2.6rem] bg-[#0A4A46] p-5 sm:p-7 border-2 border-[#126861] shadow-2xl hover:shadow-[0_25px_60px_rgba(10,74,70,0.35)] hover:border-brand-cyan/60 hover:-translate-y-1.5 transition-all duration-500 overflow-hidden text-white flex flex-col justify-between group">
                 
                 {/* Atmospheric Glow */}
                 <div className="absolute top-0 right-0 w-64 h-64 bg-brand-cyan/15 rounded-full blur-3xl pointer-events-none" />
@@ -93,6 +88,7 @@ export default function StorySection() {
                     src="/images/brand/ceo.jpg?v=2"
                     alt="Mian Nauman Kabir — CEO of Fryzo"
                     fill
+                    sizes="(max-width: 768px) 100vw, 420px"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                     priority
                     unoptimized

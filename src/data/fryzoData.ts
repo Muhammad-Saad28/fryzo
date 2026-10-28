@@ -3,10 +3,11 @@ export interface Product {
   name: string;
   slug: string;
   weight: string;
-  cutType: 'Straight Cut' | 'Crinkle Cut' | 'Curly Fries';
+  cutType: 'Straight Cut' | 'Crinkle Cut' | 'Curly Fries' | 'Hash Browns';
   price: number;
   originalPrice?: number;
   image: string;
+  backImage?: string;
   description: string;
   features: string[];
   cookingTime: string;
@@ -20,9 +21,10 @@ export const PRODUCTS: Product[] = [
     slug: '1-kg-straight-cut-fries',
     weight: '1.0 KG',
     cutType: 'Straight Cut',
-    price: 950,
-    originalPrice: 1100,
-    image: '/images/products/straight-cut-1kg.png',
+    price: 550,
+    originalPrice: 650,
+    image: '/images/products/straightcut1kg1.png',
+    backImage: '/images/products/straightcutmain1kg2.png',
     description: 'The definitive classic golden straight-cut fry. Uniform 9mm cut pre-fried in pure vegetable oil for flawless crispy crust and fluffy potato core.',
     features: ['100% Selected Farm Potatoes', 'Flash Frozen at -18°C', 'Air-Fryer & Deep-Fryer Ready', 'Zero Trans Fat'],
     cookingTime: '3–4 mins at 175°C',
@@ -34,9 +36,10 @@ export const PRODUCTS: Product[] = [
     slug: 'fryzo-straight-cut-fries-2-0-kg',
     weight: '2.0 KG',
     cutType: 'Straight Cut',
-    price: 1850,
-    originalPrice: 2100,
-    image: '/images/products/straight-cut-2kg.png',
+    price: 940,
+    originalPrice: 1100,
+    image: '/images/products/straightcut2kg1.png',
+    backImage: '/images/products/straughtcut2kg2.png',
     description: 'Generous family pack for parties and gatherings. Delivers consistent restaurant-grade crunch and natural potato aroma in every serving.',
     features: ['Family Value Pack', 'Restaurant Quality Consistency', 'Quick Frying Formula', 'Natural Potato Flavor'],
     cookingTime: '3–4 mins at 175°C',
@@ -48,9 +51,10 @@ export const PRODUCTS: Product[] = [
     slug: 'fryzo-crinkle-cut-fries-2-0-kg',
     weight: '2.0 KG',
     cutType: 'Crinkle Cut',
-    price: 1950,
-    originalPrice: 2250,
-    image: '/images/products/crinkle-cut-2kg.png',
+    price: 940,
+    originalPrice: 1100,
+    image: '/images/products/crinklecut1.png',
+    backImage: '/images/products/crinklecut2.png',
     description: 'Sculpted deep ridges maximize surface area for extraordinary crispness and superior sauce retention. An unforgettable sensory bite.',
     features: ['Enhanced Surface Crisp', 'Holds Dips & Seasoning Better', 'Golden Crisp Exterior', 'Soft Velvety Interior'],
     cookingTime: '3.5–4.5 mins at 175°C',
@@ -62,12 +66,28 @@ export const PRODUCTS: Product[] = [
     slug: 'fryzo-curly-fries-2-0-kg',
     weight: '2.0 KG',
     cutType: 'Curly Fries',
-    price: 2150,
-    originalPrice: 2450,
-    image: '/images/products/curly-fries-2kg.png',
+    price: 1800,
+    originalPrice: 2000,
+    image: '/images/products/curlyfins2kg1.png',
+    backImage: '/images/products/curlyfins2kg2.png',
     description: 'Signature spiral-cut fries seasoned with a light savory spice blend. Fun spiral shapes delivering a savory crunch that delights all ages.',
     features: ['Signature Spiral Geometry', 'Mildly Seasoned Coating', 'Extra Long Hold Time', 'Fun Gourmet Experience'],
     cookingTime: '3.5–4 mins at 175°C',
+    shelfLife: '18 Months at -18°C'
+  },
+  {
+    id: 'hashbrowns-2kg',
+    name: 'Fryzo Crispy Hash Browns 2.0 kg',
+    slug: 'fryzo-hash-browns-2-0-kg',
+    weight: '2.0 KG',
+    cutType: 'Hash Browns',
+    price: 900,
+    originalPrice: 1200,
+    image: '/images/products/hashbrown2kg1.png',
+    backImage: '/images/products/hashbrown2kg2.png',
+    description: 'Golden triangular potato patties crafted with shredded organic potatoes. Crispy golden exterior, tender fluffy inside, quick to prepare in skillet, oven, or air fryer.',
+    features: ['Crispy Triangular Patties', '100% Organic Potatoes', 'Halal Certified', 'Air Fryer & Skillet Ready'],
+    cookingTime: '4–5 mins at 180°C',
     shelfLife: '18 Months at -18°C'
   }
 ];

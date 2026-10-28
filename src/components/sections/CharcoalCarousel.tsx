@@ -7,6 +7,7 @@ export default function CharcoalCarousel() {
     'STRAIGHT CUT FRIES',
     'CRINKLE CUT FRIES',
     'CURLY SPIRAL FRIES',
+    'CRISPY HASH BROWNS',
     '100% FARM POTATOES',
     'RAPID IQF FLASH-FROZEN',
     'HEALTHY & TASTY EVERY BITE',

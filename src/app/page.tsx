@@ -14,8 +14,8 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-brand-cream relative">
       
-      {/* Outer Dark Green Enclosure Rectangle */}
-      <div className="relative w-full border-[10px] md:border-[14px] border-[#364231] bg-[#364231] shadow-2xl overflow-hidden">
+      {/* Outer Enclosure Rectangle Fixed Flush on Edges in Model's Deep Green (#0A4A46) */}
+      <div className="relative w-full border-[10px] md:border-[14px] border-[#0A4A46] bg-[#0A4A46] shadow-2xl overflow-hidden">
         {/* Inner Rounded Canvas matching the screenshot's inner curve */}
         <div className="w-full bg-brand-cream rounded-[2.5rem] md:rounded-[3.2rem] overflow-hidden">
           <Header />
